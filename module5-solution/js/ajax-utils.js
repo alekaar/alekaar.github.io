@@ -49,23 +49,16 @@ function handleResponse(request,
 
   if ((request.readyState == 4) &&
      (request.status == 200)) {
-    console.log(1);
-    
+
     // Default to isJsonResponse = true
     if (isJsonResponse == undefined) {
-      isJsonResponse = true;
-      console.log(2);
-      
+      isJsonResponse = true;  
     }
     
     if (isJsonResponse) {
-      console.log(3);
-      
       responseHandler(JSON.parse(request.responseText));      
     }
-    else {
-      console.log(4);
-      
+    else {      
       responseHandler(request.responseText);
     }
   }
