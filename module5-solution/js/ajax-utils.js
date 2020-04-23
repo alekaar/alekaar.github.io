@@ -25,7 +25,6 @@ ajaxUtils.sendGetRequest =
   function(requestUrl, responseHandler, isJsonResponse) {
     
     var request = getRequestObject();
-    console.log(request);
     
     request.onreadystatechange = 
       function() {
@@ -45,8 +44,6 @@ ajaxUtils.sendGetRequest =
 function handleResponse(request,
                         responseHandler,
                         isJsonResponse) {
-                          console.log('BOOOOO', request);
-
   if ((request.readyState == 4) &&
      (request.status == 200)) {
 

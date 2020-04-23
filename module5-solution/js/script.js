@@ -105,8 +105,6 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
       const chosenCategoryShortName = "\'" + chooseRandomCategory(categories).short_name + "\'";
-
-      console.log(chosenCategoryShortName);
       
       // TODO: STEP 3: DONE
       //  Substitute {{randomCategoryShortName}} in the home html snippet with the
@@ -140,7 +138,6 @@ function buildAndShowHomeHTML (categories) {
 function chooseRandomCategory (categories) {
   // Choose a random index into the array (from 0 inclusively until array length (exclusively))
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
-  console.log(randomArrayIndex);
   
   // return category object with that randomArrayIndex
   return categories[randomArrayIndex];
